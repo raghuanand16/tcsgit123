@@ -1,0 +1,280 @@
+Initialized empty Git repository in C:/Users/Acer/tcsgitdemo/.git/
+
+C:\Users\Acer\tcsgitdemo>git add .
+
+C:\Users\Acer\tcsgitdemo>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Sample.txt
+
+
+C:\Users\Acer\tcsgitdemo>git confog
+git: 'confog' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+C:\Users\Acer\tcsgitdemo>git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+C:\Users\Acer\tcsgitdemo>git config --global user.name "Raghu"
+
+C:\Users\Acer\tcsgitdemo>git config --global user.email "raghu.anand16@gmail.com"
+
+C:\Users\Acer\tcsgitdemo>git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+C:\Users\Acer\tcsgitdemo>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=Raghu
+user.email=raghu.anand16@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+
+C:\Users\Acer\tcsgitdemo>git commit -m "1st commit"
+[master (root-commit) a3d19ee] 1st commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Sample.txt
+
+C:\Users\Acer\tcsgitdemo>git log
+commit a3d19eeebd0a89a849dd7748c3f4ca3df35e78ba (HEAD -> master)
+Author: Raghu <raghu.anand16@gmail.com>
+Date:   Wed Jul 7 18:44:52 2021 +0530
+
+    1st commit
+
+C:\Users\Acer\tcsgitdemo>git tag -a v1.0 -m "version 1"
+
+C:\Users\Acer\tcsgitdemo>git log
+commit a3d19eeebd0a89a849dd7748c3f4ca3df35e78ba (HEAD -> master, tag: v1.0)
+Author: Raghu <raghu.anand16@gmail.com>
+Date:   Wed Jul 7 18:44:52 2021 +0530
+
+    1st commit
+
+C:\Users\Acer\tcsgitdemo>git add .
+
+C:\Users\Acer\tcsgitdemo>git commit -m "2nd commit"
+[master 99e8910] 2nd commit
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\Acer\tcsgitdemo>git log
+commit 99e89104b5c0c8b88c27b65e644cfb20d94179a6 (HEAD -> master)
+Author: Raghu <raghu.anand16@gmail.com>
+Date:   Wed Jul 7 18:53:40 2021 +0530
+
+    2nd commit
+
+commit a3d19eeebd0a89a849dd7748c3f4ca3df35e78ba (tag: v1.0)
+Author: Raghu <raghu.anand16@gmail.com>
+Date:   Wed Jul 7 18:44:52 2021 +0530
+
+    1st commit
+
+C:\Users\Acer\tcsgitdemo>git tag -a v1.1 -m "version 1.1"
+
+C:\Users\Acer\tcsgitdemo>git log
+commit 99e89104b5c0c8b88c27b65e644cfb20d94179a6 (HEAD -> master, tag: v1.1)
+Author: Raghu <raghu.anand16@gmail.com>
+Date:   Wed Jul 7 18:53:40 2021 +0530
+
+    2nd commit
+
+commit a3d19eeebd0a89a849dd7748c3f4ca3df35e78ba (tag: v1.0)
+Author: Raghu <raghu.anand16@gmail.com>
+Date:   Wed Jul 7 18:44:52 2021 +0530
+
+    1st commit
+
+C:\Users\Acer\tcsgitdemo>git remote add varun https://github.com/raghuanand16/tcsgit123.git
+
+C:\Users\Acer\tcsgitdemo>git push varun master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 480 bytes | 53.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/raghuanand16/tcsgit123.git
+ * [new branch]      master -> master
+
+C:\Users\Acer\tcsgitdemo>git tag
+v1.0
+v1.1
+
+C:\Users\Acer\tcsgitdemo>git show v1.1
+tag v1.1
+Tagger: Raghu <raghu.anand16@gmail.com>
+Date:   Wed Jul 7 18:56:07 2021 +0530
+
+version 1.1
+
+commit 99e89104b5c0c8b88c27b65e644cfb20d94179a6 (HEAD -> master, tag: v1.1, varun/master)
+Author: Raghu <raghu.anand16@gmail.com>
+Date:   Wed Jul 7 18:53:40 2021 +0530
+
+    2nd commit
+
+diff --git a/Sample.txt b/Sample.txt
+index 32263f6..7307e99 100644
+--- a/Sample.txt
++++ b/Sample.txt
+
+C:\Users\Acer\tcsgitdemo>git push varun --tags
+Enumerating objects: 2, done.
+Counting objects: 100% (2/2), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 287 bytes | 143.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/raghuanand16/tcsgit123.git
+ * [new tag]         v1.0 -> v1.0
+ * [new tag]         v1.1 -> v1.1
+
+C:\Users\Acer\tcsgitdemo>git pull varun master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 683 bytes | 3.00 KiB/s, done.
+From https://github.com/raghuanand16/tcsgit123
+ * branch            master     -> FETCH_HEAD
+   99e8910..77c5a2f  master     -> varun/master
+Updating 99e8910..77c5a2f
+Fast-forward
+ Sample.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\Users\Acer\tcsgitdemo>git add .
+
+C:\Users\Acer\tcsgitdemo>git commit -m "new"
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\Acer\tcsgitdemo>git log
+commit 77c5a2f94fa790f5c0a0012eef567334a185ab81 (HEAD -> master, varun/master)
+Author: Raghu Anand <69553725+raghuanand16@users.noreply.github.com>
+Date:   Wed Jul 7 19:21:15 2021 +0530
+
+    3rd commit
+
+commit 99e89104b5c0c8b88c27b65e644cfb20d94179a6 (tag: v1.1)
+Author: Raghu <raghu.anand16@gmail.com>
+Date:   Wed Jul 7 18:53:40 2021 +0530
+
+    2nd commit
+
+commit a3d19eeebd0a89a849dd7748c3f4ca3df35e78ba (tag: v1.0)
+Author: Raghu <raghu.anand16@gmail.com>
+Date:   Wed Jul 7 18:44:52 2021 +0530
+
+    1st commit
+
+C:\Users\Acer\tcsgitdemo>
+C:\Users\Acer\tcsgitdemo>
